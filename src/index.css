@@ -1,0 +1,645 @@
+/* Center body content */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Food grid with centered content */
+.food-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Card styling with centered alignment */
+.plan-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Header styling */
+.plan-card h2 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #0073e6;
+}
+
+.plan-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Button styling with hover effect */
+.plan-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.plan-card button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Fancy input field styling */
+input[type="text"], input[type="email"], input[type="password"], input[type="phone"], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="phone"]:focus, textarea:focus {
+  outline: none;
+  border-color: #0073e6;
+  box-shadow: 0 0 8px rgba(0, 115, 230, 0.2);
+}
+
+/* Centered form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .food-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 90%;
+  }
+}
+/* Fancy input field styling for CartPage */
+.cart-input, .cart-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.cart-input:focus, .cart-textarea:focus {
+  outline: none;
+  border-color: #0073e6;
+  box-shadow: 0 0 8px rgba(0, 115, 230, 0.2);
+}
+
+/* Add some padding and margin to the form container */
+.cart-form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Submit button styling */
+.cart-submit-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.cart-submit-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+}
+
+/* Account button styling */
+.account-button {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #005bb5;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.account-button:hover {
+  background-color: #003d80;
+}
+/* Product page button styling */
+.add-to-cart-button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffa500;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.add-to-cart-button:hover {
+  background-color: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* Product page styling */
+.product-description, .product-reviews {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+/* Center the home container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Plan buttons container */
+.plan-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual plan button styling */
+.plan-button {
+  background-color: #ff8c00;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+.plan-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+/* Food list styling */
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.food-item {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+  background-color: #f9f9f9;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.food-item:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
+}
+/* Cart page layout */
+.cart-page-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Form section styling */
+.cart-form-container {
+  flex: 2;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart summary styling */
+.cart-summary {
+  flex: 1;
+  padding: 20px;
+  margin-left: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Cart summary title */
+.cart-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Cart item count styling */
+.cart-summary p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Add to cart button styling */
+.add-to-cart-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.order-form {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-form label {
+  font-weight: bold;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.phone-input {
+  display: flex;
+}
+
+.phone-input span {
+  padding: 0.75rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-panel {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-panel h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.cart-count {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.item-details p {
+  margin: 0;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.quantity-control input {
+  width: 2rem;
+  text-align: center;
+}
+
+.remove-btn {
+  color: #dc3545;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cart-summary {
+  padding-top: 1rem;
+  font-size: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.coupon {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.coupon a {
+  color: #007bff;
+}
+
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.order-form {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.order-form p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-form label {
+  font-weight: bold;
+  color: #555;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+}
+
+.phone-input span {
+  padding: 0.75rem 1rem;
+  background-color: #e9ecef;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.phone-input input {
+  border-radius: 0 4px 4px 0;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.submit-btn {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.cart-panel {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-panel h2 {
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-count {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 0;
+}
+
+.item-details p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-control button {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quantity-control input {
+  width: 2rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.remove-btn {
+  color: #dc3545;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cart-summary {
+  padding-top: 1rem;
+  font-size: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.coupon {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.coupon a {
+  color: #007bff;
+}
